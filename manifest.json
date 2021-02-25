@@ -2,7 +2,7 @@
   "name": "Boycott Frensh",
   "version": "1.0",
   "description": "Build an Extension!",
-  "permissions": ["declarativeContent","storage", "activeTab", "tabs"],
+  "permissions": [],
   "content_scripts": [
     {
       "matches": ["*://*.jumia.com.eg/*.html", "*://*.souq.com/*"],
