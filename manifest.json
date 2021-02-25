@@ -1,0 +1,29 @@
+{
+  "name": "Boycott Frensh",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "permissions": ["declarativeContent","storage", "activeTab", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.jumia.com.eg/*.html", "*://*.souq.com/*"],
+      "js": ["injector.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "web_accessible_resources": ["helpers.js", "jumia-blocker.js","souq-blocker.js", "brands.json", "warning.html", "boycot.jpeg"],
+  "manifest_version": 2
+}
