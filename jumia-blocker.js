@@ -3,7 +3,6 @@ document.addEventListener('SendJsonUrl', function (e)
   if(!dataLayer)return  
 
   let {jsonObj,warningImgUrl}=e.detail;
-  console.log(warningImgUrl)
   frenchBrands = jsonObj.frenchBrands 
   // lowercase and remove accents
   frenchBrands = frenchBrands.map(s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").trim()) 

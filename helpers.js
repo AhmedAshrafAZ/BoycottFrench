@@ -16,25 +16,22 @@ function showWarning(brandname, warningImgUrl){
 
 }
 
-function searchForBrnd(o, id) {
+function searchForBrnd(obj, id) {
   let result = false
-  for (p in o) {
-       if (p==='brand') return o[p]
-       else if( o.hasOwnProperty(p) && typeof o[p] === 'object' ) {
-           result = searchForBrnd(o[p], id);
-           if(result){
-              return result;
+  if (typeof obj !== 'object') return false;
+  for (prop in obj) {
+       if (prop==='brand') return obj[prop]
+       else if( obj.hasOwnProperty(prop) && typeof obj[prop] === 'object' ) {
+           result = searchForBrnd(obj[prop], id);
+           if(result) return result;
+           
+       }
+       else if(obj.hasOwnProperty(prop) && typeof obj[prop] === 'array' ) {
+           for (elem in obj[prop]){
+              result = searchForBrnd(elem, id);
+              if(result) return result;              
            }
        }
-       else if( o.hasOwnProperty(p) && typeof o[p] === 'array' ) {
-           for (e in o[p]){
-              result = searchForBrnd(o[p], id);
-              if(result){
-                  return result;
-              }
-           }
-       }
-       
    }
    return result;
 }
