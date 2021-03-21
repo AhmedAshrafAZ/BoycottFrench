@@ -6,11 +6,33 @@
   "content_scripts": [
     {
       "matches": [
+        "*://www.amazon.com.br/*",
+        "*://www.amazon.ca/*",
+        "*://www.amazon.com.mx/*",	
+        "*://www.amazon.com/*",
+        "*://www.amazon.cn/*",
+        "*://www.amazon.in/*",
+        "*://www.amazon.co.jp/*",
+        "*://www.amazon.sg/*",
+        "*://www.amazon.com.tr/*",	
+        "*://www.amazon.ae/*",
+        "*://www.amazon.sa/*",
+        "*://www.amazon.fr/*",
+        "*://www.amazon.de/*",
+        "*://www.amazon.it/*",
+        "*://www.amazon.nl/*",
+        "*://www.amazon.pl/*",
+        "*://www.amazon.es/*",
+        "*://www.amazon.se/*",
+        "*://www.amazon.co.uk/*",
+        "*://www.amazon.com.au/*",	
         "*://*.jumia.com.eg/*.html", 
         "*://*.jumia.com.gh/*.html", 
         "*://*.jumia.com.ng/*.html", 
         "*://*.jumia.com.tn/*.html", 
+        "*://*.jumia.com.et/*.html", 
         "*://*.souq.com/*"],
+        
       "js": ["injector.js"],
       "run_at": "document_end"
     }
@@ -29,6 +51,6 @@
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
-  "web_accessible_resources": ["helpers.js", "jumia-blocker.js","souq-blocker.js", "brands.json", "warning.html", "boycot.jpeg"],
+  "web_accessible_resources": ["helpers.js", "jumia-blocker.js","amazon-blocker.js","souq-blocker.js", "brands.json", "warning.html", "boycot.jpeg"],
   "manifest_version": 2
 }

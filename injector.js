@@ -15,7 +15,10 @@
     else if (currURL.includes("souq.com")){
       script=injectScript('souq-blocker.js')
     }
-    script.onload = function() {
+    else if (currURL.includes("amazon")){
+      script=injectScript('amazon-blocker.js')
+    }
+    if(script) script.onload = function() {
       this.remove();  
       var event = new CustomEvent('SendJsonUrl', {
         detail: {jsonObj,warningImgUrl}
