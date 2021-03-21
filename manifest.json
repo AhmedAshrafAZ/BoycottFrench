@@ -5,7 +5,12 @@
   "permissions": [],
   "content_scripts": [
     {
-      "matches": ["*://*.jumia.com.eg/*.html", "*://*.souq.com/*"],
+      "matches": [
+        "*://*.jumia.com.eg/*.html", 
+        "*://*.jumia.com.gh/*.html", 
+        "*://*.jumia.com.ng/*.html", 
+        "*://*.jumia.com.tn/*.html", 
+        "*://*.souq.com/*"],
       "js": ["injector.js"],
       "run_at": "document_end"
     }
