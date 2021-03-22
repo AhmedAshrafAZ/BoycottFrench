@@ -1,4 +1,4 @@
-document.addEventListener('SendJsonUrl', function (e)
+document.addEventListener('SendJsonUrl-amazon', function (e)
 {
 
   let {jsonObj,warningImgUrl}=e.detail;

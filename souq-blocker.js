@@ -1,4 +1,4 @@
-document.addEventListener('SendJsonUrl', function (e)
+document.addEventListener('SendJsonUrl-souq', function (e)
 {
   if(!dataLayer)return  
 

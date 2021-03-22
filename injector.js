@@ -8,22 +8,23 @@
   injectScript('helpers.js')
   setTimeout(() => {
     let currURL = location.href;
-    let script;
+    let script; 
+    let siteName;
     if (currURL.includes("jumia.com")){
-      script=injectScript('jumia-blocker.js')
+      [script,siteName]=injectScript('jumia-blocker.js')
     }
     else if (currURL.includes("souq.com")){
-      script=injectScript('souq-blocker.js')
+      [script,siteName]=injectScript('souq-blocker.js')
     }
     else if (currURL.includes("amazon")){
-      script=injectScript('amazon-blocker.js')
+      [script,siteName]=injectScript('amazon-blocker.js')
     }
     else if (currURL.includes("ebay")){
-      script=injectScript('ebay-blocker.js')
+      [script,siteName]=injectScript('ebay-blocker.js')
     }
     if(script) script.onload = function() {
       this.remove();  
-      var event = new CustomEvent('SendJsonUrl', {
+      let event = new CustomEvent(`SendJsonUrl-${siteName}`, {
         detail: {jsonObj,warningImgUrl}
       })
       document.dispatchEvent(event);
@@ -32,8 +33,9 @@
 })()
 
 function injectScript(scriptName){
-  var s = document.createElement('script');  
-  s.src = chrome.runtime.getURL(scriptName);
-  (document.head || document.documentElement).appendChild(s);
-  return s
+  let siteName = scriptName.split("-")[0];
+  let scrpt = document.createElement('script');  
+  scrpt.src = chrome.runtime.getURL(scriptName);
+  (document.head || document.documentElement).appendChild(scrpt);
+  return [scrpt,siteName]
 }

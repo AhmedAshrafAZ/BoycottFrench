@@ -1,4 +1,4 @@
-document.addEventListener('SendJsonUrl', function (e)
+document.addEventListener('SendJsonUrl-jumia', function (e)
 {
   if(!dataLayer)return  
 
