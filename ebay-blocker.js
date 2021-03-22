@@ -1,4 +1,4 @@
-document.addEventListener('SendJsonUrl', function (e)
+document.addEventListener('SendJsonUrl-ebay', function (e)
 {
   let {jsonObj,warningImgUrl}=e.detail;
   frenchBrands = jsonObj.frenchBrands 
