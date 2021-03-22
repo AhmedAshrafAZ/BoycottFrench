@@ -18,6 +18,9 @@
     else if (currURL.includes("amazon")){
       script=injectScript('amazon-blocker.js')
     }
+    else if (currURL.includes("ebay")){
+      script=injectScript('ebay-blocker.js')
+    }
     if(script) script.onload = function() {
       this.remove();  
       var event = new CustomEvent('SendJsonUrl', {
