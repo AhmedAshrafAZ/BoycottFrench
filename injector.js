@@ -27,15 +27,19 @@
       let event = new CustomEvent(`SendJsonUrl-${siteName}`, {
         detail: {jsonObj,warningImgUrl}
       })
+
       document.dispatchEvent(event);
     };
   }, .1);
 })()
 
 function injectScript(scriptName){
+
   let siteName = scriptName.split("-")[0];
   let scrpt = document.createElement('script');  
   scrpt.src = chrome.runtime.getURL(scriptName);
   (document.head || document.documentElement).appendChild(scrpt);
+
+
   return [scrpt,siteName]
 }
