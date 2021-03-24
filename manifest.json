@@ -70,13 +70,13 @@
     "128": "images/icon128.png"
   },
   "web_accessible_resources": [
-    "helpers.js", 
-    "jumia-blocker.js",
-    "amazon-blocker.js",
-    "ebay-blocker.js",
-    "souq-blocker.js", 
+    "blockers/helpers.js",
+    "blockers/souq-blocker.js", 
+    "blockers/jumia-blocker.js",
+    "blockers/amazon-blocker.js",
+    "blockers/ebay-blocker.js",   
     "brands.json", 
     "warning.html", 
-    "boycot.jpeg"],
+    "images/boycot.jpeg"],
   "manifest_version": 2
 }
