@@ -3,7 +3,7 @@
   const response = await fetch(chrome.runtime.getURL("brands.json"))
   const jsonObj = await response.json() 
   
-  warningImgUrl = chrome.runtime.getURL("boycot.jpeg");
+  warningImgUrl = chrome.runtime.getURL("images/boycot.jpeg");
 
   injectScript('helpers.js')
   setTimeout(() => {
@@ -37,7 +37,7 @@ function injectScript(scriptName){
 
   let siteName = scriptName.split("-")[0];
   let scrpt = document.createElement('script');  
-  scrpt.src = chrome.runtime.getURL(scriptName);
+  scrpt.src = chrome.runtime.getURL("blockers/"+scriptName);
   (document.head || document.documentElement).appendChild(scrpt);
 
 
