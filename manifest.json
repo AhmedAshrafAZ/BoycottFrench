@@ -6,6 +6,12 @@
   "content_scripts": [
     {
       "matches": [
+        "*://*.jumia.com.eg/*.html", 
+        "*://*.jumia.com.gh/*.html", 
+        "*://*.jumia.com.ng/*.html", 
+        "*://*.jumia.com.tn/*.html", 
+        "*://*.jumia.com.et/*.html", 
+        "*://*.souq.com/*",        
         "*://www.amazon.com.br/*",
         "*://www.amazon.ca/*",
         "*://www.amazon.com.mx/*",	
@@ -25,13 +31,25 @@
         "*://www.amazon.es/*",
         "*://www.amazon.se/*",
         "*://www.amazon.co.uk/*",
-        "*://www.amazon.com.au/*",	
-        "*://*.jumia.com.eg/*.html", 
-        "*://*.jumia.com.gh/*.html", 
-        "*://*.jumia.com.ng/*.html", 
-        "*://*.jumia.com.tn/*.html", 
-        "*://*.jumia.com.et/*.html", 
-        "*://*.souq.com/*"],
+        "*://www.amazon.com.au/*",
+        "*://www.ebay.com.au/*", 	
+        "*://www.ebay.at/*", 	
+        "*://www.ebay.ca/*", 	
+        "*://www.ebay.fr/*", 	
+        "*://www.ebay.de/*", 	
+        "*://www.ebay.com.hk/*", 	
+        "*://www.ebay.ie/*", 	
+        "*://www.ebay.it/*", 	
+        "*://www.ebay.com.my/*", 	
+        "*://www.ebay.nl/*", 	
+        "*://www.ebay.ph/*", 	
+        "*://www.ebay.p/*",
+        "*://www.ebay.com.sg/*", 
+        "*://www.ebay.es/*", 
+        "*://www.ebay.ch/*", 	
+        "*://www.ebay.co.uk/*",
+        "*://www.ebay.com/itm/*"
+      ],
         
       "js": ["injector.js"],
       "run_at": "document_end"
@@ -51,6 +69,14 @@
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
-  "web_accessible_resources": ["helpers.js", "jumia-blocker.js","amazon-blocker.js","souq-blocker.js", "brands.json", "warning.html", "boycot.jpeg"],
+  "web_accessible_resources": [
+    "blockers/helpers.js",
+    "blockers/souq-blocker.js", 
+    "blockers/jumia-blocker.js",
+    "blockers/amazon-blocker.js",
+    "blockers/ebay-blocker.js",   
+    "brands.json", 
+    "warning.html", 
+    "images/boycot.jpeg"],
   "manifest_version": 2
 }

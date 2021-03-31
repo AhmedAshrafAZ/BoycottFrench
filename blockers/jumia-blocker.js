@@ -1,4 +1,4 @@
-document.addEventListener('SendJsonUrl', function (e)
+document.addEventListener('SendJsonUrl-jumia', function (e)
 {
   if(!dataLayer)return  
 
@@ -7,16 +7,9 @@ document.addEventListener('SendJsonUrl', function (e)
   // lowercase and remove accents
   frenchBrands = frenchBrands.map(s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").trim()) 
 
-  let currBrand;
-  
-  if (dataLayer.length == 8){
-    currBrand = dataLayer[6]?.ecommerce?.click?.products[0]?.brand
-  }  
-  else if (dataLayer.length == 7) {
-    currBrand = dataLayer[3]?.ecommerce?.detail?.products[0]?.brand
-  }
+  let currBrand = dataLayer[0]?.ecommerce?.detail?.products[0]?.brand
   currBrand = currBrand ? currBrand: searchForBrnd(dataLayer,'brand')
-  
+
   if(currBrand){
     currBrand = currBrand.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").trim()
     if (frenchBrands.indexOf(currBrand)>-1){
@@ -26,6 +19,5 @@ document.addEventListener('SendJsonUrl', function (e)
         alert(`${currBrand} is a french brand !`)        
       }
     } 
-    
   }
 });
