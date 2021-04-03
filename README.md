@@ -8,8 +8,9 @@ An extension that helps Muslims boycott French products on E-commerce websites.
   The attacks on our prophet Muhammed -صلى الله عليه وسلم - and our religion Islam are getting more and more vicious. The attacks and the insults are either done or supported by highly french figures including government representatives. This can't be accepted in any way, shape, or form. Boycotting frensh products is our first step to reply on french government acts. This extension acts as one small contribution to this cause. 
 
 ## Installation
-  - Install from chrome web store: https://chrome.google.com/webstore/detail/boycott-frensh/ichikjifkfpdaohfjoaejebidimfmecp?hl=en&authuser=0
+  Install from chrome web store: https://chrome.google.com/webstore/detail/boycott-french/ichikjifkfpdaohfjoaejebidimfmecp?hl=en
+
 ## Status
-  Currently, the extension is supported on google chrome browser, and it works for Jumia and Souq.com only.
+  Currently, the extension is supported on google chrome browser, and it works for Amazon, Ebay, Jumia, and Souq.com.
   We are planning to extend this to other browsers and famous E-commerce websites.
   
