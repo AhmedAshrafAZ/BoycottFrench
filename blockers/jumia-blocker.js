@@ -2,10 +2,13 @@ document.addEventListener('SendJsonUrl-jumia', function (e)
 {
   if(!dataLayer)return  
 
-  let {jsonObj,warningImgUrl}=e.detail;
-  frenchBrands = jsonObj.frenchBrands 
+  let {jsonObj,warningImgUrl,boycottIsraelUrl}=e.detail;
+  frenchBrands = jsonObj.frenchBrands
+  israelBrands =  jsonObj.israelBrands
+ 
   // lowercase and remove accents
   frenchBrands = frenchBrands.map(s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").trim()) 
+  israelBrands = israelBrands.map(s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").trim()) 
 
   let currBrand = dataLayer[0]?.ecommerce?.detail?.products[0]?.brand
   currBrand = currBrand ? currBrand: searchForBrnd(dataLayer,'brand')
@@ -18,6 +21,14 @@ document.addEventListener('SendJsonUrl-jumia', function (e)
       } catch (error) {
         alert(`${currBrand} is a french brand !`)        
       }
-    } 
+    }
+     // israelBrands part
+     else if (israelBrands.indexOf(currBrand)>-1){
+      try {
+        showWarningIsraelBrand(currBrand, boycottIsraelUrl)        
+      } catch (error) {
+        alert(`${currBrand} is an Israeli brand !`)     
+      }
+    }
   }
 });
