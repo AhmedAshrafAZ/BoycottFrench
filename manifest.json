@@ -78,8 +78,7 @@
     "brands.json", 
     "warning.html", 
     "images/boycot.jpeg",
-    "images/boycottIsrael.png",
-    "images/boycott-logo.png"
+    "images/boycottIsrael.png"
   ],
   "manifest_version": 2
 }
