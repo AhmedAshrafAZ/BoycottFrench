@@ -77,6 +77,8 @@
     "blockers/ebay-blocker.js",   
     "brands.json", 
     "warning.html", 
-    "images/boycot.jpeg"],
+    "images/boycot.jpeg",
+    "images/boycottIsrael.png"
+  ],
   "manifest_version": 2
 }

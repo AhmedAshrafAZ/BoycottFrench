@@ -4,6 +4,7 @@
   const jsonObj = await response.json() 
   
   warningImgUrl = chrome.runtime.getURL("images/boycot.jpeg");
+  boycottIsraelUrl = chrome.runtime.getURL("images/boycottIsrael.png");
 
   injectScript('helpers.js')
   setTimeout(() => {
@@ -25,7 +26,7 @@
     if(script) script.onload = function() {
       this.remove();  
       let event = new CustomEvent(`SendJsonUrl-${siteName}`, {
-        detail: {jsonObj,warningImgUrl}
+        detail: {jsonObj,warningImgUrl,boycottIsraelUrl}
       })
 
       document.dispatchEvent(event);
