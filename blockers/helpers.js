@@ -20,7 +20,7 @@ function showWarningIsraelBrand(brandname, Url){
 
         var d = document.createElement('div');  
         d.innerHTML = `
-            <div style="padding-top:185px; text-align:center; z-index:1; position: fixed;   left: 0;
+            <div style="padding-top:170px; text-align:center; z-index:1; position: fixed;   left: 0;
             top: 0;
             width: 100%; /* Full width */
             height: 100%; /* Full height */
