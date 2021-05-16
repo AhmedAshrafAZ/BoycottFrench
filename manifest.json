@@ -48,7 +48,13 @@
         "*://www.ebay.es/*", 
         "*://www.ebay.ch/*", 	
         "*://www.ebay.co.uk/*",
-        "*://www.ebay.com/itm/*"
+        "*://www.ebay.com/itm/*",
+        "*://*.wix.com/*",
+        "*://*.fiverr.com/*",
+        "*://*.myheritage.com/*",
+        "*://*.viber.com/*",
+        "*://*.elementor.com/*",
+        "*://*.monday.com/*"
       ],
         
       "js": ["injector.js"],
@@ -74,7 +80,8 @@
     "blockers/souq-blocker.js", 
     "blockers/jumia-blocker.js",
     "blockers/amazon-blocker.js",
-    "blockers/ebay-blocker.js",   
+    "blockers/ebay-blocker.js",
+    "blockers/israelWebsites-blocker.js",   
     "brands.json", 
     "warning.html", 
     "images/boycot.jpeg",

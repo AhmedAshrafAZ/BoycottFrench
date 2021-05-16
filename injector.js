@@ -23,6 +23,10 @@
     else if (currURL.includes("ebay")){
       [script,siteName]=injectScript('ebay-blocker.js')
     }
+    // Israeli websites part
+    else if (currURL.includes("wix.com") || currURL.includes("fiverr.com") || currURL.includes("myheritage.com") || currURL.includes("viber.com") || currURL.includes("elementor.com") || currURL.includes("monday.com")){
+      [script,siteName]=injectScript('israelWebsites-blocker.js')
+    }
     if(script) script.onload = function() {
       this.remove();  
       let event = new CustomEvent(`SendJsonUrl-${siteName}`, {
