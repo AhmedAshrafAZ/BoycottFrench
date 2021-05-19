@@ -1,43 +1,58 @@
 document.addEventListener('SendJsonUrl-israelWebsites', function (e)
 {
     let {boycottIsraelUrl}=e.detail;
-    // Israeli websites part
-    if(window.location.href.includes("wix.com")){
-        try {
-            showWarningIsraelBrand("wix.com", boycottIsraelUrl)        
-        } catch (error) {
-            alert(`wix.com is an Israeli brand !`)        
+    const href = window.location.href;
+    const findTerm = (term) => {
+        if (href.includes(term)){
+            return href;
         }
-    } else if(window.location.href.includes("fiverr.com")){
-        try {
-            showWarningIsraelBrand("fiverr.com", boycottIsraelUrl)        
-        } catch (error) {
-            alert(`fiverr.com is an Israeli brand !`)        
-        }
-    } else if(window.location.href.includes("myheritage.com")){
-        try {
-            showWarningIsraelBrand("myheritage.com", boycottIsraelUrl)        
-        } catch (error) {
-            alert(`myheritage.com is an Israeli brand !`)        
-        }
-    } else if(window.location.href.includes("viber.com")){
-        try {
-            showWarningIsraelBrand("viber.com", boycottIsraelUrl)        
-        } catch (error) {
-            alert(`viber.com is an Israeli brand !`)        
-        }
-    } else if(window.location.href.includes("elementor.com")){
-        try {
-            showWarningIsraelBrand("elementor.com", boycottIsraelUrl)        
-        } catch (error) {
-            alert(`elementor.com is an Israeli brand !`)        
-        }
-    } else if(window.location.href.includes("monday.com")){
-        try {
-            showWarningIsraelBrand("monday.com", boycottIsraelUrl)        
-        } catch (error) {
-            alert(`monday.com is an Israeli brand !`)        
-        }
-    }
+    };
 
+    // Israeli websites part
+    switch (href){
+        case findTerm('wix'):
+            try {
+                showWarningIsraelBrand("wix", boycottIsraelUrl)        
+            } catch (error) {
+                alert(`wix is an Israeli brand !`)        
+            }
+            break;
+        case findTerm('fiverr'):
+            try {
+                showWarningIsraelBrand("fiverr", boycottIsraelUrl)        
+            } catch (error) {
+                alert(`fiverr.com is an Israeli brand !`)        
+            }
+            break;
+        case findTerm('myheritage'):
+            try {
+                showWarningIsraelBrand("myheritage", boycottIsraelUrl)        
+            } catch (error) {
+                alert(`myheritage is an Israeli brand !`)        
+            }
+            break;
+        case findTerm('viber'):
+            try {
+                showWarningIsraelBrand("viber", boycottIsraelUrl)        
+            } catch (error) {
+                alert(`viber is an Israeli brand !`)        
+            }
+            break;
+        case findTerm('elementor'):
+            try {
+                showWarningIsraelBrand("elementor", boycottIsraelUrl)        
+            } catch (error) {
+                alert(`elementor is an Israeli brand !`)        
+            }
+            break;
+        case findTerm('monday'):
+            try {
+                showWarningIsraelBrand("monday", boycottIsraelUrl)        
+            } catch (error) {
+                alert(`monday is an Israeli brand !`)        
+            }
+            break;
+        default: break;
+    }
+    
 });
